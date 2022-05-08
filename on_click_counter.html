@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>counter</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+
+    }
+    .btn {
+
+        background-color: lightseagreen;
+        height: 40px;
+        width: 150px;
+          position: absolute;
+        border-radius: 22px;
+        top: 100px;
+        font-size: 15px;
+        font-weight: bold;
+
+}
+.btn2{
+
+background-color: lightseagreen;
+height: 40px;
+width: 150px;
+  position: absolute;
+border-radius: 22px;
+top: 200px;
+font-size: 15px;
+font-weight: bold;
+
+}
+</style>
+</head>
+<body>
+    <div>
+<button class="btn ">clickme_count</button>
+</div>
+<div>
+    <button class="btn2">clickme_count</button>
+    </div>
+    <script>
+        let btn_refrence=document.querySelector(".btn");
+        let btn_refrence2=document.querySelector(".btn2");
+        
+        let count=0; 
+
+        btn_refrence.addEventListener("click",function(){
+         
+         count ++;
+         // console.log(count)
+         btn_refrence.innerHTML=count;
+         btn_refrence.appendChild(btn_refrence); 
+        
+        })
+
+
+
+
+
+
+
+        btn_refrence2.addEventListener("click",function(){
+         
+         count --;
+         // console.log(count)
+         btn_refrence2.innerHTML=count;
+         btn_refrence2.appendChild(btn_refrence2); 
+        
+        })
+
+
+
+
+
+
+    </script>
+</body>
+</html>
